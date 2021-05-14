@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Chakra Petch', sans-serif;
+  margin: 20px;
+}
+header {
+  font-size: 36pt;
+  text-align: center;
+  background-color: #eee;
+  padding: 20px;
+  font-family: 'Sedgwick Ave', cursive;
+}
+.case {
+  display: inline-block;
+  border: 1px solid skyblue;
+  border-radius: 8px;
+  text-align: center;
+  margin: 5px;
+  padding: 8px;
+  vertical-align: middle;
+}
+.destaque {
+  color: blue;
+}
+h1 {
+  margin: 12px;
+}
+img {
+  margin: 7px;
+}
+body {
+  counter-reset: h1counter;
+}
+h1:before {
+  content: counter(h1counter) " - ";
+  counter-increment: h1counter;
+}
+.case p {
+  font-size: 12pt;
+}
+@media print {
+  .group {page-break-inside: avoid;}
+}
