@@ -5,18 +5,17 @@
 }
 body {
   font-family: 'Chakra Petch', sans-serif;
-  margin: 20px;
 }
 header {
   font-size: 36pt;
   text-align: center;
   background-color: #eee;
-  padding: 20px;
+  padding: 30px;
   font-family: 'Sedgwick Ave', cursive;
 }
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
   grid-gap: 6px;
   margin: 8px;
 }
@@ -30,9 +29,6 @@ header {
 }
 .destaque {
   color: blue;
-}
-h1 {
-  margin: 12px;
 }
 img {
   margin: 7px;
@@ -49,4 +45,12 @@ h1:before {
 }
 @media print {
   .group {page-break-inside: avoid;}
+}
+.controls {
+  padding: 14px;
+}
+.controls {
+  position: sticky;
+  top: 0;
+  background:  #eee;
 }
