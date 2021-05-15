@@ -12,7 +12,7 @@ U' R U2 R' U2 R U' R'
 U F' U2 F U2 F' U F
 U' R U' R' U F' U' F
 U' R U R' U R U R'
-R U' R' U2 F' U' F
+U' R U2' R' U F' U' F
 R U' R' U R U' R' U2 R U' R'
 U F' U F U' F' U' F
 U' R U' R' U R U R'
