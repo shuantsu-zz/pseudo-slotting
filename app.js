@@ -49,7 +49,7 @@ console.log(cases);
 
 function counter(move) {
   if (move.length > 1) {
-    if (move[1] === "'") return move[0]
+    if (move[1] === "'") return move[0];
     return move;
   }
   return move + "'";
