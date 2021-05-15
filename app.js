@@ -45,8 +45,6 @@ R U' R' U R U2' R' U R U' R'
 R F U R U' R' F' U' R'
 R U R' U' R U' R' U2 F' U' F`.split('\n');
 
-console.log(cases);
-
 function counter(move) {
   if (move.length > 1) {
     if (move[1] === "'") return move[0];
@@ -56,7 +54,7 @@ function counter(move) {
 }
 
 function inverse(moves) {
-  const result = moves.split(' ').reverse().map(mv => mv ? counter(mv): "").join(' ');
+  const result = moves.split(' ').reverse().map(mv => mv ? counter(mv) : "").join(' ');
   return result;
 }
 
@@ -72,10 +70,8 @@ function render() {
     const cube = document.createElement('div');
     const alg = document.createElement('p');
     const setup = document.createElement('p');
-    wrapper.appendChild(title);
-    wrapper.appendChild(cube);
-    wrapper.appendChild(setup);
-    wrapper.appendChild(alg);
+    
+    [title, cube, setup, alg].map(el => wrapper.appendChild(el));
     
     const sch = document.getElementById('color-scheme').value;
     const alg_ = `${c} ${premoves.value}`;
@@ -84,17 +80,12 @@ function render() {
     title.innerText = `F2L ${idx+1}`
     SRVisualizer.cubePNG(cube, `visualcube.php?fmt=svg&stage=f2l&sch=${sch}&size=${size}&case=${alg_}`);
 
-
     alg.innerHTML = `<strong>Solution:</strong> ${alg_}`;
     setup.innerHTML = `<strong>Setup:</strong> ${setup_}`;
     
     root.appendChild(wrapper);
   });
 
-}
-
-function saveInput(){
-  console.log('Saving data');
 }
 
 const premoves = document.getElementById('premoves');
