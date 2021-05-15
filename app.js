@@ -8,7 +8,7 @@ F' U' F
 R U R'
 U' R U R' U2 R U' R'
 U F' U' F U2 F' U F
-U' R U2' R' U2 R U' R'
+U' R U2 R' U2 R U' R'
 U F' U2 F U2 F' U F
 U' R U' R' U F' U' F
 U' R U R' U R U R'
@@ -34,14 +34,14 @@ R' F R F' R' F R F'
 R U R' U' R U R'
 R U' R' U F' U F
 R U R' U' R U R' U' R U R'
-U' R U' R' U2' R U' R'
+U' R U' R' U2 R U' R'
 U F' U F U2 F' U F
 U2 R U' R' U' F' U' F
 d R' U' R d' R U R'
 U U'
 R' F R F' R U' R' U R U' R' U2 R U' R'
 R U' R' U' R U R' U2 R U' R'
-R U' R' U R U2' R' U R U' R'
+R U' R' U R U2 R' U R U' R'
 R F U R U' R' F' U' R'
 R U R' U' R U' R' U2 F' U' F`.split('\n');
 
@@ -49,7 +49,7 @@ function counter(move) {
   if (move.length > 1) {
     if (move[1] === "'") return move[0];
     return move;
-  }
+  }    
   return move + "'";
 }
 
