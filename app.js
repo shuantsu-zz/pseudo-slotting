@@ -79,7 +79,7 @@ function render() {
     const alg_ = `${c} ${premoves}`;
     const setup_ = inverse(alg_);
 
-    title.innerText = `F2L ${idx+1}`
+    title.innerText = `F2L ${idx+1}`;
     SRVisualizer.cubePNG(cube, `visualcube.php?fmt=svg&stage=f2l&sch=${sch}&size=${size}&case=${alg_}`);
 
     alg.innerHTML = `<strong>Solution:</strong> ${alg_}`;
