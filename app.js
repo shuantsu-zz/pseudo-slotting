@@ -63,6 +63,9 @@ function render() {
   const root = document.getElementById('root');
   root.innerHTML = "";
 
+  const sch = schemeSelect.value;
+  const premoves = premovesSelect.value;
+
   cases.forEach((c, idx) => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('case');
@@ -72,9 +75,8 @@ function render() {
     const setup = document.createElement('p');
     
     [title, cube, setup, alg].map(el => wrapper.appendChild(el));
-    
-    const sch = document.getElementById('color-scheme').value;
-    const alg_ = `${c} ${premoves.value}`;
+
+    const alg_ = `${c} ${premoves}`;
     const setup_ = inverse(alg_);
 
     title.innerText = `F2L ${idx+1}`
@@ -88,10 +90,10 @@ function render() {
 
 }
 
-const premoves = document.getElementById('premoves');
+const premovesSelect = document.getElementById('premoves');
 premoves.onchange = render;
 
-const scheme = document.getElementById('color-scheme');
-scheme.onchange = render;
+const schemeSelect = document.getElementById('color-scheme');
+schemeSelect.onchange = render;
 
 render();
